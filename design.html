@@ -5,37 +5,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="assets/css/styles.css">
   <style>
-    /* Overlay Style */
-    .overlay {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.7);
-      justify-content: center;
-      align-items: center;
-      z-index: 999;
-    }
+  /* Overlay Style */
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
 
-    /* Image Style */
-    .overlay img {
-      max-width: 80%;
-      max-height: 80%;
-      border-radius: 8px;
-    }
+  /* Image Style */
+  .overlay img {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 8px;
+  }
 
-    /* Close Button Style */
-    .close-btn {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      color: #fff;
-      font-size: 20px;
-      cursor: pointer;
-    }
-  </style>
+  /* Close Button Style */
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #ffffff;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  /* Navigation Style */
+  .nav-btn {
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .prev-btn {
+    left: 10px;
+  }
+
+  .next-btn {
+    right: 10px;
+  }
+</style>
   <!-- =====BOX ICONS===== -->
   <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
   <title>Johnny - Multimedia Designer</title>
@@ -163,21 +181,36 @@ kofiWidgetOverlay.draw('spiralnerv', {
   <!--===== SCROLL REVEAL =====-->
   <script src="https://unpkg.com/scrollreveal"></script>
 
-  <!--===== MAIN JS =====-->
+  <<!--===== MAIN JS =====-->
   <script src="assets/js/main.js"></script>
 
   <script>
     let currentIndex = 0;
+    const preloader = document.getElementById('preloader');
 
     function openOverlay(imageSrc, title, index) {
       currentIndex = index;
-      document.getElementById('overlay-img').src = imageSrc;
-      document.getElementById('overlay-img').alt = title;
-      document.getElementById('overlay').style.display = 'flex';
+      preloader.style.opacity = 1;
+      preloader.style.display = 'flex';
+      
+      const img = new Image();
+      img.src = imageSrc;
+      img.alt = title;
+      img.onload = function() {
+        preloader.style.opacity = 0;
+        setTimeout(() => {
+          document.getElementById('overlay-img').src = img.src;
+          document.getElementById('overlay-img').alt = img.alt;
+          document.getElementById('overlay').style.opacity = 1;
+        }, 300);
+      };
     }
 
     function closeOverlay() {
-      document.getElementById('overlay').style.display = 'none';
+      document.getElementById('overlay').style.opacity = 0;
+      setTimeout(() => {
+        preloader.style.display = 'none';
+      }, 300);
     }
 
     function navigate(direction) {
@@ -192,8 +225,3 @@ kofiWidgetOverlay.draw('spiralnerv', {
 
 </body>
 </html>
-
-
-
-
-

@@ -181,36 +181,21 @@ kofiWidgetOverlay.draw('spiralnerv', {
   <!--===== SCROLL REVEAL =====-->
   <script src="https://unpkg.com/scrollreveal"></script>
 
-  <<!--===== MAIN JS =====-->
+  <!--===== MAIN JS =====-->
   <script src="assets/js/main.js"></script>
 
   <script>
     let currentIndex = 0;
-    const preloader = document.getElementById('preloader');
 
     function openOverlay(imageSrc, title, index) {
       currentIndex = index;
-      preloader.style.opacity = 1;
-      preloader.style.display = 'flex';
-      
-      const img = new Image();
-      img.src = imageSrc;
-      img.alt = title;
-      img.onload = function() {
-        preloader.style.opacity = 0;
-        setTimeout(() => {
-          document.getElementById('overlay-img').src = img.src;
-          document.getElementById('overlay-img').alt = img.alt;
-          document.getElementById('overlay').style.opacity = 1;
-        }, 300);
-      };
+      document.getElementById('overlay-img').src = imageSrc;
+      document.getElementById('overlay-img').alt = title;
+      document.getElementById('overlay').style.display = 'flex';
     }
 
     function closeOverlay() {
-      document.getElementById('overlay').style.opacity = 0;
-      setTimeout(() => {
-        preloader.style.display = 'none';
-      }, 300);
+      document.getElementById('overlay').style.display = 'none';
     }
 
     function navigate(direction) {
@@ -225,3 +210,8 @@ kofiWidgetOverlay.draw('spiralnerv', {
 
 </body>
 </html>
+
+
+
+
+

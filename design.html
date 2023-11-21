@@ -66,12 +66,67 @@
     <div class="cursor-particle"></div>
   </div>
 
-  <!--===== HEADER =====-->
-  <header class="l-header">
-    <!-- Your existing header code here -->
-  </header>
+   <!--===== HEADER =====-->
+   <header class="l-header">
+    <nav class="nav bd-grid">
+        <div>
+            <a href="#" class="nav__logo">Impelled</a>
+        </div>
 
-  <main class="l-main">
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="../index.html" class="nav__link active">Home</a></li>
+                <li class="nav__item"><a href="../about.html" class="nav__link">About</a></li>
+                <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                <li class="nav__item"><a href="#gallery" class="nav__link">Project Gallery</a></li>
+                <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li> 
+                <li class="nav__item"><a href="../design.html" class="nav__link">Designs</a></li>
+
+            </ul>
+           
+        </div>
+
+        <div class="nav__toggle" id="nav-toggle">
+            <i class='bx bx-menu'></i>
+        </div>
+    </nav>
+</header>
+
+<main class="l-main">
+
+
+
+<!--===== GALLERY HEADER =====-->
+<section class="gallery-header bd-grid" id="gallery">
+  <div class="gallery-header__content">
+      <h1 class="gallery-header__title">Explore My Work</h1>
+      <p class="gallery-header__subtitle">A collection of my creative projects</p>
+  </div>
+</section>
+
+<style>
+  /* Animation Styles */
+  @keyframes scaleAndFadeIn {
+      from {
+          opacity: 0;
+          transform: scale(0.8);
+      }
+      to {
+          opacity: 1;
+          transform: scale(1);
+      }
+  }
+
+  /* Apply Animation to Gallery Header */
+  .gallery-header {
+      animation: scaleAndFadeIn 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;
+  }
+
+  /* Adjust cubic-bezier values for a different easing effect */
+</style>
+
+
+
     <!--===== PORTFOLIO GALLERY =====-->
     <section class="gallery" id="gallery">
       <h2 class="section-title">Design Portfolio</h2>

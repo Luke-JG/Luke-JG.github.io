@@ -60,43 +60,49 @@
 
       <div class="advanced-gallery-container">
         <!-- Repeat the following structure for each item -->
-        <div class="gallery-image" onclick="openOverlay('assets/design/a (1).png', 'Logo F-SH')">
+        <div class="gallery-image" onclick="openOverlay('assets/design/a (1).png', 'Logo F-SH', 0)">
           <img src="assets/design/a (1).png" alt="Flyer Design 1">
         </div>
-        <div class="gallery-image" onclick="openOverlay('assets/design/a (1).png', 'Logo F-SH')">
+        <div class="gallery-image" onclick="openOverlay('assets/design/a (2).png', 'E-Y-E', 1)">
           <img src="assets/design/a (2).png" alt="Flyer Design 1">
         </div>
-        <div class="gallery-image" onclick="openOverlay('assets/design/a (1).png', 'Logo F-SH')">
+        <div class="gallery-image" onclick="openOverlay('assets/design/a (3).png', 'Product Design', 2)">
           <img src="assets/design/a (3).png" alt="Flyer Design 1">
         </div>
-        <div class="gallery-image" onclick="openOverlay('assets/design/a (1).png', 'Logo F-SH')">
+        <div class="gallery-image" onclick="openOverlay('assets/design/a (4).png', 'SEEL', 3)">
           <img src="assets/design/a (4).png" alt="Flyer Design 1">
         </div>
-        <div class="gallery-image" onclick="openOverlay('assets/design/a (1).png', 'Logo F-SH')">
+        <div class="gallery-image" onclick="openOverlay('assets/design/a (5).png', 'TORCHIQ', 4)">
           <img src="assets/design/a (5).png" alt="Flyer Design 1">
         </div>
-        <div class="gallery-image" onclick="openOverlay('assets/design/a (1).png', 'Logo F-SH')">
+        <div class="gallery-image" onclick="openOverlay('assets/design/a (6).png', 'JOJO', 5)">
           <img src="assets/design/a (6).png" alt="Flyer Design 1">
         </div>
-        <div class="gallery-image" onclick="openOverlay('assets/design/a (1).png', 'Logo F-SH')">
+        <div class="gallery-image" onclick="openOverlay('assets/design/a (7).png', 'Logo F-SH2', 6)">
           <img src="assets/design/a (7).png" alt="Flyer Design 1">
         </div>
-        <div class="gallery-image" onclick="openOverlay('assets/design/a (1).png', 'Logo F-SH')">
+        <div class="gallery-image" onclick="openOverlay('assets/design/a (8).png', 'Poster Willow', 7)">
           <img src="assets/design/a (8).png" alt="Flyer Design 1">
         </div>
-        <div class="gallery-image" onclick="openOverlay('assets/design/a (1).png', 'Logo F-SH')">
+        <div class="gallery-image" onclick="openOverlay('assets/design/a (9).png', 'Poster Sleepy Hollow', 8)">
           <img src="assets/design/a (9).png" alt="Flyer Design 1">
+        </div>
+        
+        <div class="gallery-image" onclick="openOverlay('assets/design/a (10).png', 'Focus', 9)">
+          <img src="assets/design/a (10).png" alt="Flyer Design 1">
         </div>
 
         <!-- Repeat for other items -->
       </div>
 
-      <!-- Overlay -->
-      <div class="overlay" id="overlay">
-        <span class="close-btn" onclick="closeOverlay()">&times;</span>
-        <img src="" alt="Overlay Image" id="overlay-img">
-      </div>
-    </section>
+         <!-- Overlay -->
+         <div class="overlay" id="overlay">
+          <span class="close-btn" onclick="closeOverlay()">&times;</span>
+          <img src="" alt="Overlay Image" id="overlay-img">
+          <span class="nav-btn prev-btn" onclick="navigate(-1)">&#9665;</span>
+          <span class="nav-btn next-btn" onclick="navigate(1)">&#9655;</span>
+        </div>
+      </section>
 
     <!-- Other sections go here -->
   <!--===== CONTACT =====-->
@@ -161,7 +167,10 @@ kofiWidgetOverlay.draw('spiralnerv', {
   <script src="assets/js/main.js"></script>
 
   <script>
-    function openOverlay(imageSrc, title) {
+    let currentIndex = 0;
+
+    function openOverlay(imageSrc, title, index) {
+      currentIndex = index;
       document.getElementById('overlay-img').src = imageSrc;
       document.getElementById('overlay-img').alt = title;
       document.getElementById('overlay').style.display = 'flex';
@@ -170,11 +179,19 @@ kofiWidgetOverlay.draw('spiralnerv', {
     function closeOverlay() {
       document.getElementById('overlay').style.display = 'none';
     }
+
+    function navigate(direction) {
+      currentIndex += direction;
+      const images = document.querySelectorAll('.gallery-image img');
+      if (currentIndex < 0) currentIndex = images.length - 1;
+      if (currentIndex >= images.length) currentIndex = 0;
+      const currentImage = images[currentIndex];
+      openOverlay(currentImage.src, currentImage.alt, currentIndex);
+    }
   </script>
 
 </body>
 </html>
-
 
 
 

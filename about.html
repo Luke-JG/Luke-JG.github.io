@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- =====BOX ICONS===== -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Interests | Johnny's Portfolio</title>
+</head>
+<body>
+
+    <!--===== cursor =====-->
+    <div class="custom-cursor-element">
+        <div class="cursor-trail"></div>
+        <div class="cursor-particle"></div>
+    </div>
+
+    <!--===== HEADER =====-->
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="#" class="nav__logo">Johnny's Portfolio</a>
+            </div>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link active">Home</a></li>
+                    <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                    <li class="nav__item"><a href="#gallery" class="nav__link">Gallery</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li> 
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+
+    <!--===== Interests =====-->
+    <section class="work section" id="interests">
+        <h2 class="section-title">Interests</h2>
+        <div class="interests__container bd-grid">
+            <!-- Work Item 1 -->
+            <div class="work__item">
+                <a href="javascript:void(0);" class="work__img" onclick="openModal('interests-modal-1')">
+                    <img src="assets/img/cat.gif" alt="Pixel Art">
+                </a>
+            </div>
+            <!-- Work Item 2 -->
+            <div class="work__item">
+                <a href="javascript:void(0);" class="work__img" onclick="openModal('interests-modal-2')">
+                    <img src="assets/img/guts.gif" alt="Old Media">
+                </a>
+            </div>
+            <!-- Work Item 3 -->
+            <div class="work__item">
+                <a href="javascript:void(0);" class="work__img" onclick="openModal('interests-modal-3')">
+                    <img src="assets/img/deck.gif" alt="Cyberdecks">
+                </a>
+            </div>
+            <!-- Work Item 4 -->
+            <div class="work__item">
+                <a href="javascript:void(0);" class="work__img" onclick="openModal('interests-modal-4')">
+                    <img src="assets/img/food.gif" alt="Cooking">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Work Item 1 -->
+    <div id="interests-modal-1" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('interests-modal-1')">&times;</span>
+            <img src="assets/img/cat.gif" alt="Pixel Art">
+            <p>Pixel art captivates with its nostalgic yet imaginative beauty, crafting intricate details and harmonious compositions within the confines of a minimalist, pixelated canvas.</p>
+        </div>
+    </div>
+
+    <!-- Modal for Work Item 2 -->
+    <div id="interests-modal-2" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('interests-modal-2')">&times;</span>
+            <img src="assets/img/guts.gif" alt="Old Media">
+            <p>Old Media with its evocative storytelling and enduring characters, creating a time-capsule of heartfelt emotions and artistic ingenuity.</p>
+        </div>
+    </div>
+
+    <!-- Modal for Work Item 3 -->
+    <div id="interests-modal-3" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('interests-modal-3')">&times;</span>
+            <img src="assets/img/deck.gif" alt="Cyberdecks">
+            <p>In the realm of cyberdecks and DIY tech like Raspberry Pi, a captivating synergy emerges as futuristic possibilities intertwine with the satisfaction of hands-on ingenuity.</p>
+        </div>
+    </div>
+
+    <!-- Modal for Work Item 4 -->
+    <div id="interests-modal-4" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('interests-modal-4')">&times;</span>
+            <img src="assets/img/food.gif" alt="Cooking">
+            <p>Cooking is a delightful art, where ingredients meld into a symphony of flavors and textures, offering both sustenance and creative expression.</p>
+        </div>
+    </div>
+
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+    </script>
+
+    <!--===== GALLERY =====-->
+    <!-- Add your gallery section here -->
+
+     <!--===== CONTACT =====-->
+           
+    </main>
+    <section class="Contact section " id="contact">
+        <h2 class="section-title">Contact</h2>
+    <div id="wrapper">
+        <form class="form">
+          <p class="field required half">
+            <label class="label required" for="name">Name</label>
+            <input class="text-input" id="name" name="name" required="<%= true %>" type="text"></input>
+          </p>
+          <p class="field required half">
+            <label class="label" for="email">E-mail</label>
+            <input class="text-input" id="email" name="email" required="<%= true %>" type="email"></input>
+          </p>
+          <p class="field">
+            <label class="label" for="message">Message</label>
+            <textarea class="textarea" cols="50" id="message" name="message" required="<%= true %>" rows="4"></textarea>
+          </p>
+          <p class="field">
+            <input class="button" type="submit" value="Send message"></input>
+          </p>
+        </form>
+      </div>
+
+    <!--===== FOOTER =====-->
+    <footer class="footer">
+        <p class="footer__title">Johnny</p>
+        <div class="footer__social">
+            <a href="https://www.linkedin.com/in/luke-george-4921751a7/" class="footer__icon"><i class='bx bxl-linkedin' ></i></a>
+            <a href="https://www.instagram.com/johnny_verissimus/" class="footer__icon"><i class='bx bxl-instagram'></i></a>
+            <a href="https://github.com/Luke-JG" class="footer__icon"><i class='bx bxl-github' ></i></a>
+        </div>
+        <p class="footer__copy">&#169; Johnny's Portfolio. All rights reserved</p>
+    </footer>
+
+    <script>
+        kofiWidgetOverlay.draw('spiralnerv', {
+          'type': 'floating-chat',
+          'floating-chat.donateButton.text': 'Support me',
+          'floating-chat.donateButton.background-color': '#323842',
+          'floating-chat.donateButton.text-color': '#fff'
+        });
+      </script>
+                
+            
+            
+              
+      
+              <!--===== SCROLL REVEAL =====-->
+              <script src="https://unpkg.com/scrollreveal"></script>
+      
+      
+          
+              <!--===== MAIN JS =====-->
+              <script src="assets/js/main.js"></script>

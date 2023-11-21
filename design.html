@@ -1,339 +1,141 @@
-      <!-- Gallery Container -->
-      <div class="gallery-container">
-        <!-- Item 1: Flyer Design -->
-        <div class="gallery-item" data-category="design" data-subcategory="flyers">
-          <img src="assets/design/a (1).png" alt="Flyer Design 1">
-          <div class="gallery-item-details">
-            <h2>Logo F-SH</h2>
-            <p>Description of the flyer design project.</p>
-            <a href="#" class="btn" target="_blank">View Design</a>
-          </div>
-        </div>
-        <!-- Item 2: Flyer Design -->
-        <div class="gallery-item" data-category="design" data-subcategory="flyers">
-          <img src="assets/design/a (2).png" alt="Flyer Design 2">
-          <div class="gallery-item-details">
-            <h2>Logo E-Y-E</h2>
-            <p>Description of the flyer design project.</p>
-            <a href="#" class="btn" target="_blank">View Design</a>
-          </div>
-        </div>
-        <!-- Item 3: Flyer Design -->
-        <div class="gallery-item" data-category="design" data-subcategory="flyers">
-          <img src="assets/design/a (3).png" alt="Flyer Design 3">
-          <div class="gallery-item-details">
-            <h2>Product Design JOJO</h2>
-            <p>Description of the flyer design project.</p>
-            <a href="#" class="btn" target="_blank">View Design</a>
-          </div>
-        </div>
-        <!-- Item 4: Flyer Design -->
-        <div class="gallery-item" data-category="design" data-subcategory="flyers">
-          <img src="assets/design/a (4).png" alt="Flyer Design 4">
-          <div class="gallery-item-details">
-            <h2>Logo SXXL</h2>
-            <p>Description of the flyer design project.</p>
-            <a href="#" class="btn" target="_blank">View Design</a>
-          </div>
-        </div>
-        <!-- Item 5: Flyer Design -->
-        <div class="gallery-item" data-category="design" data-subcategory="flyers">
-          <img src="assets/design/a (5).png" alt="Flyer Design 5">
-          <div class="gallery-item-details">
-            <h2>Logo TORCHIQ</h2>
-            <p>Description of the flyer design project.</p>
-            <a href="#" class="btn" target="_blank">View Design</a>
-          </div>
-        </div>
-        <!-- Item 6: Flyer Design -->
-        <div class="gallery-item" data-category="design" data-subcategory="flyers">
-          <img src="assets/design/a (6).png" alt="Flyer Design 6">
-          <div class="gallery-item-details">
-            <h2>Logo JOJO</h2>
-            <p>Description of the flyer design project.</p>
-            <a href="#" class="btn" target="_blank">View Design</a>
-          </div>
-        </div>
-        <!-- Item 7: Flyer Design -->
-        <div class="gallery-item" data-category="design" data-subcategory="flyers">
-          <img src="assets/design/a (7).png" alt="Flyer Design 7">
-          <div class="gallery-item-details">
-            <h2>Logo F-SH</h2>
-            <p>Description of the flyer design project.</p>
-            <a href="#" class="btn" target="_blank">View Design</a>
-          </div>
-        </div>
-        <!-- Item 8: Flyer Design -->
-        <div class="gallery-item" data-category="design" data-subcategory="flyers">
-          <img src="assets/design/a (8).png" alt="Flyer Design 8">
-          <div class="gallery-item-details">
-            <h2>Poster The Willows</h2>
-            <p>Description of the flyer design project.</p>
-            <a href="#" class="btn" target="_blank">View Design</a>
-          </div>
-        </div>
-        <!-- Item 9: Flyer Design -->
-        <div class="gallery-item" data-category="design" data-subcategory="flyers">
-          <img src="assets/design/a (9).png" alt="Flyer Design 9">
-          <div class="gallery-item-details">
-            <h2>Poster The Legend Of Sleepy Hollow</h2>
-            <p>Description of the flyer design project.</p>
-            <a href="#" class="btn" target="_blank">View Design</a>
-          </div>
-        </div>
-        <!-- Item 10: Logo Design -->
-        <div class="gallery-item" data-category="design" data-subcategory="logos">
-          <img src="assets/img/design1.jpg" alt="Logo Design 1">
-          <div class="gallery-item-details">
-            <h2>Poster Focus Tempted</h2>
-            <p>Description of the logo design project.</p>
-            <a href="#" class="btn" target="_blank">View Design</a>
-          </div>
-        </div>
-        <!-- Add more items for other categories and subcategories as needed -->
-      </div>
-    </section>
-
-
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Johnny - Multimedia Designer</title>
-
-  <!-- Add the Lightbox library -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
   <link rel="stylesheet" href="assets/css/styles.css">
 
   <!-- =====BOX ICONS===== -->
   <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
-  <style>
-    /* Additional styling for the advanced gallery */
-    .gallery-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 20px;
-    }
-
-    .gallery-item {
-      position: relative;
-      overflow: hidden;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease-in-out;
-    }
-
-    .gallery-item img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-      transition: transform 0.3s ease-in-out;
-    }
-
-    .gallery-item:hover {
-      transform: scale(1.05);
-    }
-
-    .gallery-item-details {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      color: #fff;
-      opacity: 0;
-      transition: opacity 0.3s ease-in-out;
-    }
-
-    .gallery-item:hover .gallery-item-details {
-      opacity: 1;
-    }
-
-    .gallery-item-details h2 {
-      font-size: 1.5rem;
-      margin-bottom: 10px;
-    }
-
-    .gallery-item-details p {
-      font-size: 1rem;
-      margin-bottom: 15px;
-    }
-
-    .gallery-item-details .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #fff;
-      color: #333;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-  </style>
+  <title>Johnny - Multimedia Designer</title>
 </head>
 <body>
 
-  <!-- Your existing HTML... -->
+  <!--===== cursor =====-->
+  <div class="custom-cursor-element">
+    <div class="cursor-trail"></div>
+    <div class="cursor-particle"></div>
+  </div>
+
+  <!--===== HEADER =====-->
+  <header class="l-header">
+    <nav class="nav bd-grid">
+      <div>
+        <a href="#" class="nav__logo">Johnny</a>
+      </div>
+
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="../index.html" class="nav__link">Home</a></li>
+          <li class="nav__item"><a href="../about.html" class="nav__link">About</a></li>
+          <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+          <li class="nav__item"><a href="#gallery" class="nav__link active">Portfolio</a></li>
+          <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li> 
+        </ul>
+      </div>
+
+      <div class="nav__toggle" id="nav-toggle">
+        <i class='bx bx-menu'></i>
+      </div>
+    </nav>
+  </header>
 
   <main class="l-main">
     <!--===== PORTFOLIO GALLERY =====-->
     <section class="gallery" id="gallery">
       <h2 class="section-title">Design Portfolio</h2>
 
-      <!-- Gallery Container -->
-      <div class="gallery-container" id="gallery-container">
-        <!-- Your gallery items... -->
+      <div class="advanced-gallery-container">
+        <!-- Repeat the following structure for each item -->
+        <a href="assets/design/a (1).png" data-lightbox="gallery" data-title="Logo F-SH">
+          <img src="assets/design/a (1).png" alt="Flyer Design 1"  class="gallery-image">
+        </a>
+        <a href="assets/design/a (2).png" data-lightbox="gallery" data-title="Logo E-Y-E">
+          <img src="assets/design/a (2).png" alt="Flyer Design 1"  class="gallery-image">
+        </a>
+        <a href="assets/design/a (3).png" data-lightbox="gallery" data-title="Product Design JOJP">
+          <img src="assets/design/a (3).png" alt="Flyer Design 1"  class="gallery-image">
+        </a>
+        <a href="assets/design/a (4).png" data-lightbox="gallery" data-title="Logo SXXL">
+          <img src="assets/design/a (4).png" alt="Flyer Design 1"  class="gallery-image">
+        </a>
+        <a href="assets/design/a (5).png" data-lightbox="gallery" data-title="Logo TORCHIQ">
+          <img src="assets/design/a (5).png" alt="Flyer Design 1"  class="gallery-image">
+        </a>
+        <a href="assets/design/a (6).png" data-lightbox="gallery" data-title="Logo JOJO ">
+          <img src="assets/design/a (6).png" alt="Flyer Design 1"  class="gallery-image">
+        </a>
+        <a href="assets/design/a (7).png" data-lightbox="gallery" data-title="Logo F-SH2">
+          <img src="assets/design/a (7).png" alt="Flyer Design 1"  class="gallery-image">
+        </a>
+        <a href="assets/design/a (8).png" data-lightbox="gallery" data-title="POSTER Willows">
+          <img src="assets/design/a (8).png" alt="Flyer Design 1"  class="gallery-image">
+        </a>
+        <a href="assets/design/a (9).png" data-lightbox="gallery" data-title="Poster Sleepy">
+          <img src="assets/design/a (9).png" alt="Flyer Design 1"  class="gallery-image">
+        </a>
+        <a href="assets/design/a (10).png" data-lightbox="gallery" data-title="Poster Focus">
+          <img src="assets/design/a (10).jpg" alt="Flyer Design 1"  class="gallery-image">
+        </a>
+      </section>
+      <!--===== CONTACT =====-->
+           
+    </main>
+    <section class="Contact section" id="contact">
+      <h2 class="section-title">Contact</h2>
+      <div id="wrapper">
+        <form class="form">
+          <p class="field required half">
+            <label class="label required" for="name">Name</label>
+            <input class="text-input" id="name" name="name" required="<%= true %>" type="text"></input>
+          </p>
+          <p class="field required half">
+            <label class="label" for="email">E-mail</label>
+            <input class="text-input" id="email" name="email" required="<%= true %>" type="email"></input>
+          </p>
+          <p class="field">
+            <label class="label" for="message">Message</label>
+            <textarea class="textarea" cols="50" id="message" name="message" required="<%= true %>" rows="4"></textarea>
+          </p>
+          <p class="field">
+            <input class="button" type="submit" value="Send message"></input>
+          </p>
+        </form>
       </div>
-    </section>
 
-    <!--===== CONTACT =====-->
-    <section class="contact section" id="contact">
-      <h2 class="section-title">Contact Johnny</h2>
-      <div id="contact-wrapper">
-        <!-- Include your contact form here -->
-        <!-- ... -->
-      </div>
-    </section>
-  </main>
+      <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+<script>
+kofiWidgetOverlay.draw('spiralnerv', {
+'type': 'floating-chat',
+'floating-chat.donateButton.text': 'Support me',
+'floating-chat.donateButton.background-color': '#323842',
+'floating-chat.donateButton.text-color': '#fff'
+});
+</script>
 
-  <!-- Your existing HTML... -->
+  <!--===== FOOTER =====-->
+  <footer class="footer">
+    <p class="footer__title">Johnny</p>
+    <div class="footer__social">
+      <a href="https://www.linkedin.com/in/luke-george-4921751a7/" class="footer__icon"><i class='bx bxl-linkedin'></i></a>
+      <a href="https://www.instagram.com/johnny_verissimus/" class="footer__icon"><i class='bx bxl-instagram'></i></a>
+      <a href="https://github.com/Luke-JG" class="footer__icon"><i class='bx bxl-github'></i></a>
+    </div>
+    <p class="footer__copy">&#169; Johnny - Multimedia Designer. All rights reserved.</p>
+  </footer>
+
+  <!-- Lightbox JS -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 
   <!--===== SCROLL REVEAL =====-->
   <script src="https://unpkg.com/scrollreveal"></script>
 
   <!--===== MAIN JS =====-->
   <script src="assets/js/main.js"></script>
-  <!-- Additional script for dynamic gallery items and Lightbox -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      // Your existing code here...
-
-      // Add this part for dynamic gallery items and lightbox
-      const galleryContainer = document.getElementById("gallery-container");
-      const lightboxContainer = document.getElementById("lightbox-container");
-
-      const designs = [
-        { src: "assets/design/a (1).png", title: "Logo F-SH", category: "flyers", description: "Description of Logo F-SH" },
-        { src: "assets/design/a (2).png", title: "Logo E-Y-E", category: "flyers", description: "Description of Logo E-Y-E" },
-        { src: "assets/design/a (3).png", title: "Product Design JOJO", category: "product-design", description: "Description of Product Design JOJO" },
-        // Add more design objects as needed
-      ];
-
-      designs.forEach((design, index) => {
-        const galleryItem = document.createElement("div");
-        galleryItem.classList.add("gallery-item");
-        galleryItem.dataset.category = design.category;
-
-        const img = document.createElement("img");
-        img.src = design.src;
-        img.alt = design.title;
-
-        const details = document.createElement("div");
-        details.classList.add("gallery-item-details");
-        details.innerHTML = `
-          <h2>${design.title}</h2>
-          <p>${design.description}</p>
-          <a href="${design.src}" class="btn" data-lightbox="designs" data-title="${design.title}" target="_blank">View Design</a>
-        `;
-
-        galleryItem.appendChild(img);
-        galleryItem.appendChild(details);
-
-        galleryContainer.appendChild(galleryItem);
-
-        // Lightbox content
-        const lightboxItem = document.createElement("a");
-        lightboxItem.href = design.src;
-        lightboxItem.dataset.lightbox = "designs";
-        lightboxItem.dataset.title = design.title;
-
-        lightboxContainer.appendChild(lightboxItem);
-
-        // Add click event listener to prevent default behavior
-        details.querySelector(".btn").addEventListener("click", function (event) {
-          event.preventDefault();
-          // Open your custom modal or perform any other desired action here
-        });
-      });
-
-      // Initialize lightbox
-      lightbox.option({
-        albumLabel: "Design %1 of %2",
-      });
-    });
-  </script>
+  <script src="assets/js/fancybox.min.js"></script>
 </body>
 </html>
-<!-- Your existing HTML... -->
-
-<!-- Gallery Container -->
-<div class="gallery-container" id="gallery-container">
-  <!-- Your gallery items... -->
-</div>
-
-<!-- Lightbox Container -->
-<div id="lightbox-container"></div>
-
-<!-- Your existing HTML... -->
-
-<!-- Additional script for dynamic gallery items and Lightbox -->
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    // Your existing code here...
-
-    // Add this part for dynamic gallery items and lightbox
-    const galleryContainer = document.getElementById("gallery-container");
-    const lightboxContainer = document.getElementById("lightbox-container");
-
-    const designs = [
-      { src: "assets/design/a (1).png", title: "Logo F-SH", category: "flyers", description: "Description of Logo F-SH" },
-      { src: "assets/design/a (2).png", title: "Logo E-Y-E", category: "flyers", description: "Description of Logo E-Y-E" },
-      { src: "assets/design/a (3).png", title: "Product Design JOJO", category: "product-design", description: "Description of Product Design JOJO" },
-      // Add more design objects as needed
-    ];
-
-    designs.forEach((design, index) => {
-      const galleryItem = document.createElement("div");
-      galleryItem.classList.add("gallery-item");
-      galleryItem.dataset.category = design.category;
-
-      const img = document.createElement("img");
-      img.src = design.src;
-      img.alt = design.title;
-
-      const details = document.createElement("div");
-      details.classList.add("gallery-item-details");
-      details.innerHTML = `
-        <h2>${design.title}</h2>
-        <p>${design.description}</p>
-        <a href="${design.src}" class="btn" data-lightbox="designs" data-title="${design.title}" target="_blank">View Design</a>
-      `;
-
-      galleryItem.appendChild(img);
-      galleryItem.appendChild(details);
-
-      galleryContainer.appendChild(galleryItem);
-
-      // Lightbox content
-      const lightboxItem = document.createElement("a");
-      lightboxItem.href = design.src;
-      lightboxItem.dataset.lightbox = "designs";
-      lightboxItem.dataset.title = design.title;
-
-      lightboxContainer.appendChild(lightboxItem);
-
-      // Add click event listener to prevent default behavior
-      details.querySelector(".btn").addEventListener("click", function (event) {
-        event.preventDefault();
-        // Open your custom modal or perform any other desired action here
-      });
-    });
-
-    // Initialize lightbox after adding items to the containers
-    lightbox.option({
-      albumLabel: "Design %1 of %2",
-    });
-  });
-</script>

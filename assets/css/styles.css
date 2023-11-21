@@ -1024,3 +1024,53 @@ svg path {
     }
   }
   
+/* Advanced Gallery Container */
+.advanced-gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 5px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Gallery Item */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Gallery Image */
+.gallery-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 3px;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Hover effect for Gallery Item */
+.gallery-item:hover {
+  transform: scale(1.);
+}
+
+/* Hover effect for Gallery Image */
+.gallery-item:hover .gallery-image {
+  transform: scale(1.1);
+}
+
+/* Lightbox Styling */
+.lb-image {
+  max-width: 100vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect for Lightbox Image */
+.lb-image:hover {
+  transform: scale(1.1);
+}

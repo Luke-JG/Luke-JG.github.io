@@ -3,12 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
   <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    /* Overlay Style */
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
 
+    /* Image Style */
+    .overlay img {
+      max-width: 80%;
+      max-height: 80%;
+      border-radius: 8px;
+    }
+
+    /* Close Button Style */
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: #fff;
+      font-size: 20px;
+      cursor: pointer;
+    }
+  </style>
   <!-- =====BOX ICONS===== -->
   <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-
   <title>Johnny - Multimedia Designer</title>
 </head>
 <body>
@@ -21,25 +50,7 @@
 
   <!--===== HEADER =====-->
   <header class="l-header">
-    <nav class="nav bd-grid">
-      <div>
-        <a href="#" class="nav__logo">Johnny</a>
-      </div>
-
-      <div class="nav__menu" id="nav-menu">
-        <ul class="nav__list">
-          <li class="nav__item"><a href="../index.html" class="nav__link">Home</a></li>
-          <li class="nav__item"><a href="../about.html" class="nav__link">About</a></li>
-          <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-          <li class="nav__item"><a href="#gallery" class="nav__link active">Portfolio</a></li>
-          <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li> 
-        </ul>
-      </div>
-
-      <div class="nav__toggle" id="nav-toggle">
-        <i class='bx bx-menu'></i>
-      </div>
-    </nav>
+    <!-- Your existing header code here -->
   </header>
 
   <main class="l-main">
@@ -49,63 +60,71 @@
 
       <div class="advanced-gallery-container">
         <!-- Repeat the following structure for each item -->
-        <a href="assets/design/a (1).png" data-lightbox="gallery" data-title="Logo F-SH">
-          <img src="assets/design/a (1).png" alt="Flyer Design 1"  class="gallery-image">
-        </a>
-        <a href="assets/design/a (2).png" data-lightbox="gallery" data-title="Logo E-Y-E">
-          <img src="assets/design/a (2).png" alt="Flyer Design 1"  class="gallery-image">
-        </a>
-        <a href="assets/design/a (3).png" data-lightbox="gallery" data-title="Product Design JOJP">
-          <img src="assets/design/a (3).png" alt="Flyer Design 1"  class="gallery-image">
-        </a>
-        <a href="assets/design/a (4).png" data-lightbox="gallery" data-title="Logo SXXL">
-          <img src="assets/design/a (4).png" alt="Flyer Design 1"  class="gallery-image">
-        </a>
-        <a href="assets/design/a (5).png" data-lightbox="gallery" data-title="Logo TORCHIQ">
-          <img src="assets/design/a (5).png" alt="Flyer Design 1"  class="gallery-image">
-        </a>
-        <a href="assets/design/a (6).png" data-lightbox="gallery" data-title="Logo JOJO ">
-          <img src="assets/design/a (6).png" alt="Flyer Design 1"  class="gallery-image">
-        </a>
-        <a href="assets/design/a (7).png" data-lightbox="gallery" data-title="Logo F-SH2">
-          <img src="assets/design/a (7).png" alt="Flyer Design 1"  class="gallery-image">
-        </a>
-        <a href="assets/design/a (8).png" data-lightbox="gallery" data-title="POSTER Willows">
-          <img src="assets/design/a (8).png" alt="Flyer Design 1"  class="gallery-image">
-        </a>
-        <a href="assets/design/a (9).png" data-lightbox="gallery" data-title="Poster Sleepy">
-          <img src="assets/design/a (9).png" alt="Flyer Design 1"  class="gallery-image">
-        </a>
-        <a href="assets/design/a (10).png" data-lightbox="gallery" data-title="Poster Focus">
-          <img src="assets/design/a (10).jpg" alt="Flyer Design 1"  class="gallery-image">
-        </a>
-      </section>
-      <!--===== CONTACT =====-->
-           
-    </main>
-    <section class="Contact section" id="contact">
-      <h2 class="section-title">Contact</h2>
-      <div id="wrapper">
-        <form class="form">
-          <p class="field required half">
-            <label class="label required" for="name">Name</label>
-            <input class="text-input" id="name" name="name" required="<%= true %>" type="text"></input>
-          </p>
-          <p class="field required half">
-            <label class="label" for="email">E-mail</label>
-            <input class="text-input" id="email" name="email" required="<%= true %>" type="email"></input>
-          </p>
-          <p class="field">
-            <label class="label" for="message">Message</label>
-            <textarea class="textarea" cols="50" id="message" name="message" required="<%= true %>" rows="4"></textarea>
-          </p>
-          <p class="field">
-            <input class="button" type="submit" value="Send message"></input>
-          </p>
-        </form>
+        <div class="gallery-image" onclick="openOverlay('assets/design/a (1).png', 'Logo F-SH')">
+          <img src="assets/design/a (1).png" alt="Flyer Design 1">
+        </div>
+        <div class="gallery-image" onclick="openOverlay('assets/design/a (1).png', 'Logo F-SH')">
+          <img src="assets/design/a (2).png" alt="Flyer Design 1">
+        </div>
+        <div class="gallery-image" onclick="openOverlay('assets/design/a (1).png', 'Logo F-SH')">
+          <img src="assets/design/a (3).png" alt="Flyer Design 1">
+        </div>
+        <div class="gallery-image" onclick="openOverlay('assets/design/a (1).png', 'Logo F-SH')">
+          <img src="assets/design/a (4).png" alt="Flyer Design 1">
+        </div>
+        <div class="gallery-image" onclick="openOverlay('assets/design/a (1).png', 'Logo F-SH')">
+          <img src="assets/design/a (5).png" alt="Flyer Design 1">
+        </div>
+        <div class="gallery-image" onclick="openOverlay('assets/design/a (1).png', 'Logo F-SH')">
+          <img src="assets/design/a (6).png" alt="Flyer Design 1">
+        </div>
+        <div class="gallery-image" onclick="openOverlay('assets/design/a (1).png', 'Logo F-SH')">
+          <img src="assets/design/a (7).png" alt="Flyer Design 1">
+        </div>
+        <div class="gallery-image" onclick="openOverlay('assets/design/a (1).png', 'Logo F-SH')">
+          <img src="assets/design/a (8).png" alt="Flyer Design 1">
+        </div>
+        <div class="gallery-image" onclick="openOverlay('assets/design/a (1).png', 'Logo F-SH')">
+          <img src="assets/design/a (9).png" alt="Flyer Design 1">
+        </div>
+
+        <!-- Repeat for other items -->
       </div>
 
-      <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+      <!-- Overlay -->
+      <div class="overlay" id="overlay">
+        <span class="close-btn" onclick="closeOverlay()">&times;</span>
+        <img src="" alt="Overlay Image" id="overlay-img">
+      </div>
+    </section>
+
+    <!-- Other sections go here -->
+  <!--===== CONTACT =====-->
+           
+</main>
+<section class="Contact section" id="contact">
+  <h2 class="section-title">Contact</h2>
+  <div id="wrapper">
+    <form class="form">
+      <p class="field required half">
+        <label class="label required" for="name">Name</label>
+        <input class="text-input" id="name" name="name" required="<%= true %>" type="text"></input>
+      </p>
+      <p class="field required half">
+        <label class="label" for="email">E-mail</label>
+        <input class="text-input" id="email" name="email" required="<%= true %>" type="email"></input>
+      </p>
+      <p class="field">
+        <label class="label" for="message">Message</label>
+        <textarea class="textarea" cols="50" id="message" name="message" required="<%= true %>" rows="4"></textarea>
+      </p>
+      <p class="field">
+        <input class="button" type="submit" value="Send message"></input>
+      </p>
+    </form>
+  </div>
+
+  <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
 <script>
 kofiWidgetOverlay.draw('spiralnerv', {
 'type': 'floating-chat',
@@ -115,8 +134,13 @@ kofiWidgetOverlay.draw('spiralnerv', {
 });
 </script>
 
-  <!--===== FOOTER =====-->
-  <footer class="footer">
+  </main>
+
+
+  <!-- Other sections go here -->
+
+   <!--===== FOOTER =====-->
+   <footer class="footer">
     <p class="footer__title">Johnny</p>
     <div class="footer__social">
       <a href="https://www.linkedin.com/in/luke-george-4921751a7/" class="footer__icon"><i class='bx bxl-linkedin'></i></a>
@@ -125,10 +149,9 @@ kofiWidgetOverlay.draw('spiralnerv', {
     </div>
     <p class="footer__copy">&#169; Johnny - Multimedia Designer. All rights reserved.</p>
   </footer>
-
   <!-- Lightbox JS -->
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-
+<script src="path/to/jquery.fancybox.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 
   <!--===== SCROLL REVEAL =====-->
@@ -136,6 +159,24 @@ kofiWidgetOverlay.draw('spiralnerv', {
 
   <!--===== MAIN JS =====-->
   <script src="assets/js/main.js"></script>
-  <script src="assets/js/fancybox.min.js"></script>
+
+  <script>
+    function openOverlay(imageSrc, title) {
+      document.getElementById('overlay-img').src = imageSrc;
+      document.getElementById('overlay-img').alt = title;
+      document.getElementById('overlay').style.display = 'flex';
+    }
+
+    function closeOverlay() {
+      document.getElementById('overlay').style.display = 'none';
+    }
+  </script>
+
 </body>
 </html>
+
+
+
+
+
+

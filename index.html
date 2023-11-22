@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+        
         <link rel="stylesheet" href="assets/css/styles.css">
 
 
@@ -35,6 +35,8 @@
                         <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
                         <li class="nav__item"><a href="#gallery" class="nav__link">Project Gallery</a></li>
                         <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li> 
+                        <li class="nav__item"><a href="../design.html" class="nav__link">Designs</a></li>
+
                     </ul>
                    
                 </div>
@@ -178,7 +180,55 @@
                                 <span class="skills__percentage">65%</span>
                             </div>
                         </div>
-
+                        <style>/* Dark Background Styles */
+                            .advanced-gallery.dark-background {
+                              background-color: #f31d1d; /* Dark grey background color */
+                              color: #fff; /* White text color for better contrast */
+                              /* Add any additional styles as needed */
+                            }
+                            
+                            /* Gallery Container Styles */
+                            .advanced-gallery-container {
+                              display: flex;
+                              flex-wrap: wrap;
+                              justify-content: center;
+                              gap: 1rem; /* Adjust the gap between cards as needed */
+                              max-width: 1200px;
+                              margin: 0 auto;
+                              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                            }
+                            
+                            /* Gallery Styles */
+                            .gallery {
+                              display: flex;
+                              justify-content: center;
+                              align-items: center;
+                              flex-wrap: wrap;
+                              gap: 20px;
+                              padding: 20px;
+                            }
+                            
+                            /* Card Styles */
+                            .card {
+                              background-color: #161616;
+                              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                              padding: 20px;
+                              max-width: 300px;
+                              text-align: center;
+                            }
+                            
+                            .card img {
+                              max-width: 100%;
+                            }
+                            
+                            .card h2 {
+                              font-size: 24px;
+                              margin: 10px 0;
+                            }
+                            
+                            .card p {
+                              font-size: 16px;
+                            }</style>
                     
                     </div>
                     
@@ -274,39 +324,42 @@
 
     <!-- Advanced Gallery Container -->
     <div class="advanced-gallery-container">
+
         <!-- Card 1: Web Scraper Project -->
-        <div class="card">
+        <article class="card">
             <img src="assets/img/web.png" alt="Web Scraper Project">
             <div class="card-details">
-                <h2>Web Scraper</h2>
+                <h3>Web Scraper</h3>
                 <p>A Python web scraper that extracts data from websites.</p>
-                <a href="https://github.com/Luke-JG/Projects/tree/main/WebScraping" class="btn" target="_blank">View Code</a>
+                <a href="https://github.com/Luke-JG/Projects/tree/main/WebScraping" class="btn" target="_blank" rel="noopener noreferrer">View Code</a>
             </div>
-        </div>
+        </article>
 
         <!-- Card 2: Weather App Project -->
-        <div class="card">
+        <article class="card">
             <img src="assets/img/rainy.png" alt="Weather App">
             <div class="card-details">
-                <h2>Weather Application</h2>
+                <h3>Weather Application</h3>
                 <p>Displays weather from searched locations.</p>
-                <a href="https://github.com/Luke-JG/Projects/tree/main/WeatherApp" class="btn" target="_blank">View Code</a>
+                <a href="https://github.com/Luke-JG/Projects/tree/main/WeatherApp" class="btn" target="_blank" rel="noopener noreferrer">View Code</a>
             </div>
-        </div>
+        </article>
 
         <!-- Card 3: Open Github Project -->
-        <div class="card">
+        <article class="card">
             <img src="assets/img/github.png" alt="Open Github">
             <div class="card-details">
-                <h2>Open Github</h2>
+                <h3>Open Github</h3>
                 <p>Go to all other projects.</p>
-                <a href="https://github.com/Luke-JG/Projects/tree/main" class="btn" target="_blank">View Projects</a>
+                <a href="https://github.com/Luke-JG/Projects/tree/main" class="btn" target="_blank" rel="noopener noreferrer">View Projects</a>
             </div>
-        </div>
+        </article>
 
         <!-- Add more cards for other projects as needed -->
+
     </div>
 </section>
+
 
             
             <!--===== CONTACT =====-->
@@ -364,6 +417,7 @@
 
     
         <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
         <script src="assets/js/main.js"></script>
     </body>
 </html>

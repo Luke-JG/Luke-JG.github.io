@@ -90,3 +90,18 @@ function closeDesignPopup(popupId) {
       popup.style.display = "none";
   }
 }
+
+//HERO BUTTONS
+document.getElementById('designGalleryButton').addEventListener('click', function() {
+  // Handle the Design Gallery button click
+  alert("Navigating to the Design Gallery!");
+  // You can replace the alert with actual navigation logic if needed
+  // Example: window.location.href = '#design-gallery';
+});
+
+document.getElementById('codeGalleryButton').addEventListener('click', function() {
+  // Handle the Code Gallery button click
+  alert("Navigating to the Code Gallery!");
+  // You can replace the alert with actual navigation logic if needed
+  // Example: window.location.href = '#code-gallery';
+});

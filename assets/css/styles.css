@@ -775,51 +775,48 @@ Feel free to integrate this code into your lesson plan and guide your kids throu
 }
 
 .advanced-gallery-container {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: flex;
-    justify-content: center; /* Center the cards horizontally */
-    gap: 20px; /* Adjust the gap between cards as needed */
-   
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem; /* Adjust the gap between cards as needed */
+  max-width: 1200px;
+  margin: 0 auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  
- 
+}
+
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
 }
 
 .card {
-    /* Other styles for the card */
-    width: 300px; /* Adjust the card width as needed */
-    text-align: center; /* Center text within the card */
-    border-radius: 8px; /* Add rounded corners for a more modern look */
-    overflow: hidden; /* Hide overflowing content within the card */
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Add a subtle box shadow for depth */
+  background-color: #161616;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 300px;
+  text-align: center;
 }
 
 .card img {
-    width: 100%; /* Make sure the image takes the full width of the card */
-    height: auto; /* Maintain aspect ratio */
-     background-color: #161616;
+  max-width: 100%;
+  border-radius: 8px;
 }
 
-.card-details {
-    padding: 20px;
+.card h2 {
+  font-size: 24px;
+  margin: 10px 0;
 }
 
-.btn {
-    /* Styles for the button */
+.card p {
+  font-size: 16px;
 }
 
-@keyframes pulsate {
-  0% {
-      box-shadow: 0 0 10px rgba(128, 0, 128, 0.4);
-  }
-  50% {
-      box-shadow: 0 0 20px rgba(128, 0, 128, 0.8);
-  }
-  100% {
-      box-shadow: 0 0 10px rgba(128, 0, 128, 0.4);
-  }
-}
 
 
 
@@ -1024,14 +1021,7 @@ svg path {
     }
   }
   
-/* Advanced Gallery Container */
-.advanced-gallery-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 5px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+
 
 /* Gallery Item */
 .gallery-item {

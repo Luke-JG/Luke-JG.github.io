@@ -1,0 +1,108 @@
+/* Overlay Styles */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .overlay img {
+    max-width: 90%; /* Increased to 90% for a larger image */
+    max-height: 90vh; /* Changed to 90% viewport height for better responsiveness */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8); /* Enhanced shadow for a more prominent effect */
+  }
+  
+  /* Close Button Styles */
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+    transition: color 0.3s ease; /* Added transition for a smooth color change */
+  }
+  
+  .close-btn:hover {
+    color: #ff5757; /* Changed hover color for emphasis */
+  }
+  
+  /* Navigation Button Styles */
+  .nav-btn {
+    color: #fff;
+    font-size: 32px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .prev-btn {
+    left: 30px;
+  }
+  
+  .next-btn {
+    right: 30px;
+  }
+  
+/* Add some basic styling for the hero section */
+.hero-section {
+    text-align: center;
+    padding: 100px 0; /* Adjust the top padding to create space for the navigation bar */
+  }
+  
+  .hero-image {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero-image img {
+    width: 100%; /* Make the image fill its container */
+    height: auto; /* Maintain the image's aspect ratio */
+  }
+  
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .hero-text button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #000000; /* Use the provided button color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.5s ease; /* Add box-shadow transition */
+    margin-top: 100%; /* Adjust the margin-top to lower the button */
+    animation: pulsate 2s infinite; /* Add pulsating glow animation */
+  }
+  
+  .hero-text button:hover {
+    background-color: rgb(144, 41, 185); /* Use the provided hover color */
+    animation: none; /* Stop pulsating glow on hover */
+  }
+  
+  @keyframes pulsate {
+    0% {
+      box-shadow: 0 0 5px rgba(144, 41, 185, 0.7); /* Initial glow color and size */
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(144, 41, 185, 0.7); /* Midway through the animation */
+    }
+    100% {
+      box-shadow: 0 0 5px rgba(144, 41, 185, 0.7); /* Return to the initial glow */
+    }
+  }
+  

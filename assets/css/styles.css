@@ -767,13 +767,20 @@ Feel free to integrate this code into your lesson plan and guide your kids throu
     width: 450px;
   }
 }
-/* Add this to your existing CSS */
+/* General Styles */
+.card,
+.btn {
+  border-radius: 8px;
+}
+
+/* Dark Background Styles */
 .advanced-gallery.dark-background {
   background-color: #f31d1d; /* Dark grey background color */
   color: #fff; /* White text color for better contrast */
   /* Add any additional styles as needed */
 }
 
+/* Gallery Container Styles */
 .advanced-gallery-container {
   display: flex;
   flex-wrap: wrap;
@@ -784,9 +791,9 @@ Feel free to integrate this code into your lesson plan and guide your kids throu
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-
+/* Gallery Styles */
 .gallery {
-  display: flex;
+  display: grid;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -794,10 +801,10 @@ Feel free to integrate this code into your lesson plan and guide your kids throu
   padding: 20px;
 }
 
+/* Card Styles */
 .card {
   background-color: #161616;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
   padding: 20px;
   max-width: 300px;
   text-align: center;
@@ -805,7 +812,6 @@ Feel free to integrate this code into your lesson plan and guide your kids throu
 
 .card img {
   max-width: 100%;
-  border-radius: 8px;
 }
 
 .card h2 {
@@ -817,11 +823,7 @@ Feel free to integrate this code into your lesson plan and guide your kids throu
   font-size: 16px;
 }
 
-
-
-
-
-
+/* Button Styles */
 .btn {
   display: inline-block;
   padding: 10px 20px;
@@ -829,23 +831,21 @@ Feel free to integrate this code into your lesson plan and guide your kids throu
   background-color: #000000;
   color: var(--first-color);
   text-decoration: none;
-  border-radius: 4px;
   transition: background-color 0.3s ease;
 }
 
 .btn:hover {
   background-color: var(--first-color);
 }
-/* Add hover effect to the project cards */
+
+/* Hover Effects */
 .card:hover {
   transform: scale(1.05);
   transition: transform 0.3s ease;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Add hover effect to the "View Code" button */
 .btn:hover {
-  background-color: var(--first-color);
   color: #fff;
 }
 

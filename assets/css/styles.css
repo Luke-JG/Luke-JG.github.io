@@ -1170,9 +1170,45 @@ svg path {
 
 
 /* ABOUT PAGE */
+/* Add this style for the advanced about section */
+/* Add this style for the advanced about section */
 .about-section {
-  background-color: rgb(99, 99, 99)); /* Set the background color for the section */
-  padding: 60px 0; /* Adjust the padding as needed */
+  background-color: #222; /* Set the background color for the section */
+  color: #fff; /* Set the text color */
+  padding: 80px 0; /* Adjust the padding as needed */
+  opacity: 0; /* Set initial opacity to 0 for the fade-in effect */
+  animation: fadeIn 1s forwards; /* Apply the fade-in animation */
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px); /* Optional: Add a slight upward movement */
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Add this style for the advanced about section */
+.about-section {
+  background-color: #080707; /* Set the background color for the section */
+  color: #d0cccc; /* Set the text color */
+  padding: 80px 0; /* Adjust the padding as needed */
+  opacity: 0; /* Set initial opacity to 0 for the fade-in effect */
+  animation: fadeIn 1s forwards; /* Apply the fade-in animation */
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px); /* Optional: Add a slight upward movement */
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
 }
 
 .about-container {
@@ -1185,12 +1221,17 @@ svg path {
 }
 
 .about-text h2 {
-  font-size: 2em; /* Adjust the heading font size as needed */
-  color: #333; /* Set the heading color */
+  font-size: 2.5em; /* Adjust the heading font size as needed */
+  margin-bottom: 20px; /* Add spacing between heading and paragraph */
 }
 
 .about-text p {
-  font-size: 1.2em; /* Adjust the paragraph font size as needed */
-  color: #ffffff; /* Set the paragraph color */
-  line-height: 1.6; /* Adjust the line height for better readability */
+  font-size: 1.3em; /* Adjust the paragraph font size as needed */
+  line-height: 1.8; /* Adjust the line height for better readability */
+}
+
+/* Add a subtle box shadow to the about container for depth */
+.about-container {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }

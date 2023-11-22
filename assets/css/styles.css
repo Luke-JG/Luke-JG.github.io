@@ -1064,3 +1064,133 @@ svg path {
 .lb-image:hover {
   transform: scale(1.1);
 }
+/* HERO SECTION */
+.hero-section {
+  position: relative;
+}
+
+.hero-image {
+  position: relative;
+  overflow: hidden;
+  margin-top: 80px; /* Adjust the margin-top to create space for the navigation bar */
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 10%; /* Adjust the left position as a percentage of the hero image width */
+  transform: translateY(-50%);
+  color: #fff; /* Set the text color */
+  width: 30%; /* Adjust the width as a percentage of the hero image width */
+}
+
+/* Adjust the font size of the text */
+.hero-text h1 {
+  font-size: 1.5em; /* You can adjust the size as needed */
+}
+
+/* Add pulsating glow and fade effect to the button */
+@keyframes pulsate {
+  0% {
+    box-shadow: 0 0 10px 0px darkorchid;
+    opacity: 1;
+  }
+  50% {
+    box-shadow: 0 0 20px 10px darkorchid;
+    opacity: 0.7;
+  }
+  100% {
+    box-shadow: 0 0 10px 0px darkorchid;
+    opacity: 1;
+  }
+}
+
+.hero-text li.button a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0c0c0c; /* Set the button background color */
+  color: #fdfdfd; /* Set the button text color */
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  animation: pulsate 2s infinite; /* Apply the pulsate animation to the button */
+}
+
+.hero-text li.button a:hover {
+  background-color: #f8f8f8; /* Set the button background color on hover */
+  animation: none; /* Disable the pulsate animation on hover */
+}
+
+/* Center and move the social icons to the right */
+.home__social {
+  text-align: center;
+  margin-left: 25px; 
+  margin-top: 20px; /* Adjust the top margin as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Move icons to the right */
+  height: 100%;
+}
+
+.home__social-icon {
+  margin: 0 10px;
+  color: #fff; /* Set the icon color */
+  font-size: 24px; /* Set the icon size */
+  text-decoration: none;
+}
+
+
+.hero-button-container {
+  display: flex;
+  gap: 10px; /* Adjust the gap between buttons as needed */
+}
+
+.hero-button {
+  list-style: none;
+}
+
+.hero-button a {
+  display: block;
+  padding: 10px 20px;
+  background-color: #0c0c0c;
+  color: #fdfdfd;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.hero-button a:hover {
+  background-color: #764fa3;
+}
+
+
+/* ABOUT PAGE */
+.about-section {
+  background-color: rgb(99, 99, 99)); /* Set the background color for the section */
+  padding: 60px 0; /* Adjust the padding as needed */
+}
+
+.about-container {
+  max-width: 800px; /* Set the maximum width for the content */
+  margin: 0 auto;
+}
+
+.about-text {
+  text-align: center;
+}
+
+.about-text h2 {
+  font-size: 2em; /* Adjust the heading font size as needed */
+  color: #333; /* Set the heading color */
+}
+
+.about-text p {
+  font-size: 1.2em; /* Adjust the paragraph font size as needed */
+  color: #ffffff; /* Set the paragraph color */
+  line-height: 1.6; /* Adjust the line height for better readability */
+}

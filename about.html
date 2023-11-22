@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="assets/css/styles.css">
+    
     <!-- =====BOX ICONS===== -->
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
@@ -42,6 +43,25 @@
             </div>
         </nav>
     </header>
+    <!--===== HERO SECTION =====-->
+<section class="hero-section">
+    <div class="hero-image">
+      <img src="assets/design/heroabout.png" alt="Hero Image">
+      <div class="hero-button-container">
+        <li class="hero-button"><a href="#" class="nav__link" id="designGalleryButton">Design Gallery</a></li>
+        <li class="hero-button"><a href="#" class="nav__link" id="codeGalleryButton">Code Gallery</a></li>
+      </div>
+    </div>
+  </section>
+  
+  <div class="home__social">
+    <a href="https://www.linkedin.com/in/luke-george-4921751a7/" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
+    <a href="https://www.instagram.com/johnny_verissimus/" class="home__social-icon"><i class='bx bxl-instagram'></i></a>
+    <a href="https://github.com/Luke-JG" class="home__social-icon"><i class='bx bxl-github'></i></a>
+  </div>
+  </section>
+  
+  
 
     <!--===== Interests =====-->
     <section class="work section" id="interests">
@@ -179,3 +199,186 @@
           
               <!--===== MAIN JS =====-->
               <script src="assets/js/main.js"></script>
+
+              <style>* Add some basic styling for the hero section */
+.hero-section {
+    text-align: center;
+    padding: 0; /* Adjust the top padding to create space for the navigation bar */
+  }
+  
+  ..hero-image {
+    position: relative;
+    overflow: hidden;
+    margin-top: 10px; /* Adjust the margin-top to create space for the navigation bar */
+  }
+  
+  .hero-image img {
+    width: 100%; /* Make the image fill its container */
+    height: auto; /* Maintain the image's aspect ratio */
+  }
+  
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .hero-text button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #000000; /* Use the provided button color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.5s ease; /* Add box-shadow transition */
+    margin-top: 100%; /* Adjust the margin-top to lower the button */
+    animation: pulsate 2s infinite; /* Add pulsating glow animation */
+  }
+  
+  .hero-text button:hover {
+    background-color: rgb(144, 41, 185); /* Use the provided hover color */
+    animation: none; /* Stop pulsating glow on hover */
+  }
+  
+  @keyframes pulsate {
+    0% {
+      box-shadow: 0 0 5px rgba(144, 41, 185, 0.7); /* Initial glow color and size */
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(144, 41, 185, 0.7); /* Midway through the animation */
+    }
+    100% {
+      box-shadow: 0 0 5px rgba(144, 41, 185, 0.7); /* Return to the initial glow */
+    }
+  }
+  .gallery {
+    text-align: center;
+    padding: 60px 0;
+  }
+
+  .advanced-gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; /* Adjust the gap between items */
+  }
+
+  .gallery-image {
+    width: 150px; /* Set the width of each gallery item */
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .gallery-image:hover {
+    transform: scale(1.1); /* Add a zoom effect on hover */
+  }
+
+  .gallery-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  }
+
+  /* Add styling for the overlay */
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+
+  #overlay-img {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .close-btn,
+  .nav-btn {
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    position: flex;
+    top: 10%;
+  }
+
+  .close-btn {
+    right: 15px;
+  }
+
+  .nav-btn {
+    font-size: 32px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .prev-btn {
+    left: 15px;
+  }
+
+  .next-btn {
+    right: 15px;
+  }
+
+
+/* Center and move the social icons to the right */
+.home__social {
+  text-align: center;
+  margin-left: 0px; 
+  margin-top: 20px; /* Adjust the top margin as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Move icons to the right */
+  height: 100%;
+}
+
+.home__social-icon {
+  margin: 0 10px;
+  color: #fff; /* Set the icon color */
+  font-size: 24px; /* Set the icon size */
+  text-decoration: none;
+}
+
+
+.hero-image {
+  position: relative;
+}
+
+.hero-button-container {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 10px; /* Adjust the gap between buttons as needed */
+}
+
+.hero-button {
+  list-style: none;
+}
+
+.hero-button a {
+  display: block;
+  padding: 10px 20px;
+  background-color: #0c0c0c;
+  color: #fdfdfd;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.hero-button a:hover {
+  background-color: #f8f8f8;
+}</style>

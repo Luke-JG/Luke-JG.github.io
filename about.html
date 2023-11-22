@@ -43,25 +43,39 @@
             </div>
         </nav>
     </header>
-    <!--===== HERO SECTION =====-->
+<!--===== HERO SECTION =====-->
 <section class="hero-section">
     <div class="hero-image">
-      <img src="assets/design/heroabout.png" alt="Hero Image">
-      <div class="hero-button-container">
-        <li class="hero-button"><a href="#" class="nav__link" id="designGalleryButton">Design Gallery</a></li>
-        <li class="hero-button"><a href="#" class="nav__link" id="codeGalleryButton">Code Gallery</a></li>
-      </div>
+        <img src="assets/design/heroabout.png" alt="Hero Image">
+        <div class="hero-text-left">
+            <p class="home__description"></p>
+            <div class="hero-button-container">
+                <li class="hero-button"><a href="#" class="nav__link" id="designGalleryButton">Design Gallery</a></li>
+                <li class="hero-button"><a href="#" class="nav__link" id="codeGalleryButton">Code Gallery</a></li>
+            </div>
+        </div>
     </div>
-  </section>
-  
+</section>
+
+  <!-- Social Icons -->
   <div class="home__social">
     <a href="https://www.linkedin.com/in/luke-george-4921751a7/" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
     <a href="https://www.instagram.com/johnny_verissimus/" class="home__social-icon"><i class='bx bxl-instagram'></i></a>
     <a href="https://github.com/Luke-JG" class="home__social-icon"><i class='bx bxl-github'></i></a>
   </div>
-  </section>
-  
-  
+</section>
+
+
+<!--===== ABOUT SECTION =====-->
+<section class="about-section">
+    <div class="about-container">
+        <div class="about-text">
+            <h2>About Me</h2>
+            <p>Hey, I'm Johnny, a 2x-year-old tech enthusiast and recent university graduate with an undying love for learning. Yep, I've reached that age where numbers start to get a bit mysterious. Whether it's coding, editing, or staying up-to-date with the latest in technology, I'm always eager to expand my knowledge. When I'm not immersed in the digital world, you'll find me enjoying a swim, playing tennis, or lost in the rhythm of music. Let's explore the exciting intersection of creativity and tech together!</p>
+        </div>
+    </div>
+</section>
+
 
     <!--===== Interests =====-->
     <section class="work section" id="interests">
@@ -356,13 +370,21 @@
   position: relative;
 }
 
+/* Add this style to move the buttons up and make them responsive */
 .hero-button-container {
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  gap: 10px; /* Adjust the gap between buttons as needed */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px; /* Adjust the gap between buttons */
+}
+
+@media (min-width: 768px) {
+    .hero-button-container {
+        flex-direction: row; /* Align buttons horizontally on larger screens */
+    }
 }
 
 .hero-button {

@@ -8,6 +8,7 @@
   
   <!-- =====BOX ICONS===== -->
   <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="styles.css"> <!-- Add a separate stylesheet for custom styles -->
   <title>Johnny - Multimedia Designer</title>
 </head>
 <body>
@@ -33,9 +34,7 @@
               <li class="nav__item"><a href="../design.html" class="nav__link">Design Gallery</a></li>
               <li class="nav__item"><a href="index.html#gallery" class="nav__link">Project Gallery</a></li>
               <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li> 
-
-        </ul>
-           
+          </ul>
         </div>
 
         <div class="nav__toggle" id="nav-toggle">
@@ -65,83 +64,125 @@
 </section>
 
 
-
-
 <style>
-  /* Animation Styles */
-  @keyframes scaleAndFadeIn {
-      from {
-          opacity: 0;
-          transform: scale(0.8);
-      }
-      to {
-          opacity: 1;
-          transform: scale(1);
-      }
+  /* Add custom styles for the gallery */
+  .filter-menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
   }
 
-  /* Apply Animation to Gallery Header */
-  .gallery-header {
-      animation: scaleAndFadeIn 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;
+  .filter-menu li {
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #555;
+    transition: color 0.3s ease-in-out;
   }
 
-  /* Adjust cubic-bezier values for a different easing effect */
+  .filter-menu li:hover {
+    color: #764FA3;
+  }
+
+  .advanced-gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .gallery-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .gallery-image:hover {
+    transform: scale(1.05);
+  }
+
+  .gallery-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
 </style>
+<!-- Filter Menu -->
+<ul class="filter-menu">
+  <li onclick="filterImages('All')">All</li>
+  <li onclick="filterImages('Logo Design')">Logo Design</li>
+  <li onclick="filterImages('Poster Design')">Poster Design</li>
+  <li onclick="filterImages('Album Design')">Album Design</li>
+  <li onclick="filterImages('Mockup Design')">Mockup Design</li>
+</ul>
+<!--===== PORTFOLIO GALLERY =====-->
+<section class="gallery" id="gallery">
+  <h2 class="section-title gallery-header">Design Portfolio</h2>
 
-
-
-    <!--===== PORTFOLIO GALLERY =====-->
-    <section class="gallery" id="gallery">
-      <h2 class="section-title">Design Portfolio</h2>
 
       <div class="advanced-gallery-container">
         <!-- Repeat the following structure for each item -->
-        <div class="gallery-image" onclick="openOverlay('assets/design/a (1).png', 'Logo F-SH', 0)">
-          <img src="assets/design/a (1).png" alt="Flyer Design 1">
+        <div class="gallery-image" data-category="Logo Design" onclick="openOverlay('assets/design/a (1).png', 'Logo F-SH', 0)">
+            <img src="assets/design/a (1).png" alt="Logo Design 1">
         </div>
-        <div class="gallery-image" onclick="openOverlay('assets/design/a (2).png', 'E-Y-E', 1)">
-          <img src="assets/design/a (2).png" alt="Flyer Design 1">
+        <div class="gallery-image" data-category="Logo Design" onclick="openOverlay('assets/design/a (2).png', 'E-Y-E', 1)">
+            <img src="assets/design/a (2).png" alt="Logo Design 2">
         </div>
-        <div class="gallery-image" onclick="openOverlay('assets/design/a (3).png', 'Product Design', 2)">
-          <img src="assets/design/a (3).png" alt="Flyer Design 1">
+        <div class="gallery-image" data-category="Mockup Design" onclick="openOverlay('assets/design/a (3).png', 'Product Design', 2)">
+            <img src="assets/design/a (3).png" alt="Mockup Design 3">
         </div>
-        <div class="gallery-image" onclick="openOverlay('assets/design/a (4).png', 'SEEL', 3)">
-          <img src="assets/design/a (4).png" alt="Flyer Design 1">
+        <div class="gallery-image" data-category="Logo Design" onclick="openOverlay('assets/design/a (4).png', 'SEEL', 3)">
+            <img src="assets/design/a (4).png" alt="Logo Design 3">
         </div>
-        <div class="gallery-image" onclick="openOverlay('assets/design/a (5).png', 'TORCHIQ', 4)">
-          <img src="assets/design/a (5).png" alt="Flyer Design 1">
+        <div class="gallery-image" data-category="Logo Design" onclick="openOverlay('assets/design/a (5).png', 'TORCHIQ', 4)">
+            <img src="assets/design/a (5).png" alt="Logo Design 4">
         </div>
-        <div class="gallery-image" onclick="openOverlay('assets/design/a (6).png', 'JOJO', 5)">
-          <img src="assets/design/a (6).png" alt="Flyer Design 1">
+        <div class="gallery-image" data-category="Logo Design" onclick="openOverlay('assets/design/a (6).png', 'JOJO', 5)">
+            <img src="assets/design/a (6).png" alt="Logo Design 5">
         </div>
-        <div class="gallery-image" onclick="openOverlay('assets/design/a (7).png', 'Logo F-SH2', 6)">
-          <img src="assets/design/a (7).png" alt="Flyer Design 1">
+        <div class="gallery-image" data-category="Logo Design" onclick="openOverlay('assets/design/a (7).png', 'Logo F-SH2', 6)">
+            <img src="assets/design/a (7).png" alt="Logo Design 6">
         </div>
-        <div class="gallery-image" onclick="openOverlay('assets/design/a (8).png', 'Poster Willow', 7)">
-          <img src="assets/design/a (8).png" alt="Flyer Design 1">
+        <div class="gallery-image" data-category="Poster Design" onclick="openOverlay('assets/design/a (8).png', 'Poster Willow', 7)">
+            <img src="assets/design/a (8).png" alt="Poster Design 1">
         </div>
-        <div class="gallery-image" onclick="openOverlay('assets/design/a (9).png', 'Poster Sleepy Hollow', 8)">
-          <img src="assets/design/a (9).png" alt="Flyer Design 1">
+        <div class="gallery-image" data-category="Poster Design" onclick="openOverlay('assets/design/a (9).png', 'Poster Sleepy Hollow', 8)">
+            <img src="assets/design/a (9).png" alt="Poster Design 2">
         </div>
-        
-        <div class="gallery-image" onclick="openOverlay('assets/design/a (10).png', 'Focus', 9)">
-          <img src="assets/design/a (10).png" alt="Flyer Design 1">
+        <div class="gallery-image" data-category="Poster Design" onclick="openOverlay('assets/design/a (10).png', 'Focus', 9)">
+            <img src="assets/design/a (10).jpg" alt="Poster Design 3">
         </div>
-
-        <!-- Repeat for other items -->
+        <div class="gallery-image" data-category="Album Design" onclick="openOverlay('assets/design/b (1).png', 'Doors', 10)">
+            <img src="assets/design/b (1).png" alt="Album Design 1">
+        </div>
+        <div class="gallery-image" data-category="Album Design" onclick="openOverlay('assets/design/b (2).png', 'Framework', 11)">
+            <img src="assets/design/b (2).png" alt="Album Design 2">
+        </div>
+        <div class="gallery-image" data-category="Album Design" onclick="openOverlay('assets/design/b (3).png', 'Light', 12)">
+            <img src="assets/design/b (3).png" alt="Album Design 3">
+        </div>
+        <div class="gallery-image" data-category="Mockup Design" onclick="openOverlay('assets/design/b (4).png', 'Cicada', 13)">
+            <img src="assets/design/b (4).png" alt="Mockup Design 1">
+        </div>
+        <div class="gallery-image" data-category="Mockup Design" onclick="openOverlay('assets/design/b (5).png', 'Gameboy', 14)">
+            <img src="assets/design/b (5).png" alt="Mockup Design 2">
+        </div>
+    </div>
       </div>
 
-         <!-- Overlay -->
-         <div class="overlay" id="overlay">
-          <span class="close-btn" onclick="closeOverlay()">&times;</span>
-          <img src="" alt="Overlay Image" id="overlay-img">
-          <span class="nav-btn prev-btn" onclick="navigate(-1)">&#9665;</span>
-          <span class="nav-btn next-btn" onclick="navigate(1)">&#9655;</span>
-        </div>
-        
-      </section>
+      
+  <!-- Overlay -->
+  <div class="overlay" id="overlay">
+    <span class="close-btn" onclick="closeOverlay()">&times;</span>
+    <img src="" alt="Overlay Image" id="overlay-img">
+    <span class="nav-btn prev-btn" onclick="navigate(-1)">&#9665;</span>
+    <span class="nav-btn next-btn" onclick="navigate(1)">&#9655;</span>
+  </div>
 
-    <!-- Other sections go here -->
   <!--===== CONTACT =====-->
            
 </main>
@@ -168,69 +209,78 @@
   </div>
 
   <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
-<script>
-kofiWidgetOverlay.draw('spiralnerv', {
-'type': 'floating-chat',
-'floating-chat.donateButton.text': 'Support me',
-'floating-chat.donateButton.background-color': '#323842',
-'floating-chat.donateButton.text-color': '#fff'
-});
-</script>
-
-  </main>
-
-
-  <!-- Other sections go here -->
-
-   <!--===== FOOTER =====-->
-   <footer class="footer">
-    <p class="footer__title">Johnny</p>
-    <div class="footer__social">
-      <a href="https://www.linkedin.com/in/luke-george-4921751a7/" class="footer__icon"><i class='bx bxl-linkedin'></i></a>
-      <a href="https://www.instagram.com/johnny_verissimus/" class="footer__icon"><i class='bx bxl-instagram'></i></a>
-      <a href="https://github.com/Luke-JG" class="footer__icon"><i class='bx bxl-github'></i></a>
-    </div>
-    <p class="footer__copy">&#169; Johnny - Multimedia Designer. All rights reserved.</p>
-  </footer>
-  <!-- Lightbox JS -->
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script src="path/to/jquery.fancybox.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-
-  <!--===== SCROLL REVEAL =====-->
-  <script src="https://unpkg.com/scrollreveal"></script>
-
-  <!--===== MAIN JS =====-->
-  <script src="assets/js/main.js"></script>
-
   <script>
-    let currentIndex = 0;
-
-    function openOverlay(imageSrc, title, index) {
-      currentIndex = index;
-      document.getElementById('overlay-img').src = imageSrc;
-      document.getElementById('overlay-img').alt = title;
-      document.getElementById('overlay').style.display = 'flex';
-    }
-
-    function closeOverlay() {
-      document.getElementById('overlay').style.display = 'none';
-    }
-
-    function navigate(direction) {
-      currentIndex += direction;
-      const images = document.querySelectorAll('.gallery-image img');
-      if (currentIndex < 0) currentIndex = images.length - 1;
-      if (currentIndex >= images.length) currentIndex = 0;
-      const currentImage = images[currentIndex];
-      openOverlay(currentImage.src, currentImage.alt, currentIndex);
-    }
+    kofiWidgetOverlay.draw('spiralnerv', {
+      'type': 'floating-chat',
+      'floating-chat.donateButton.text': 'Support me',
+      'floating-chat.donateButton.background-color': '#323842',
+      'floating-chat.donateButton.text-color': '#fff'
+    });
   </script>
+
+</section>
+
+<!--===== FOOTER =====-->
+<footer class="footer">
+  <p class="footer__title">Johnny</p>
+  <div class="footer__social">
+    <a href="https://www.linkedin.com/in/luke-george-4921751a7/" class="footer__icon"><i class='bx bxl-linkedin'></i></a>
+    <a href="https://www.instagram.com/johnny_verissimus/" class="footer__icon"><i class='bx bxl-instagram'></i></a>
+    <a href="https://github.com/Luke-JG" class="footer__icon"><i class='bx bxl-github'></i></a>
+  </div>
+  <p class="footer__copy">&#169; Johnny - Multimedia Designer. All rights reserved.</p>
+</footer>
+
+<!-- Lightbox JS -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="path/to/jquery.fancybox.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+<!--===== SCROLL REVEAL =====-->
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<!--===== MAIN JS =====-->
+<script src="assets/js/main.js"></script>
+
+<script>
+  let currentIndex = 0;
+
+  function openOverlay(imageSrc, title, index) {
+    currentIndex = index;
+    document.getElementById('overlay-img').src = imageSrc;
+    document.getElementById('overlay-img').alt = title;
+    document.getElementById('overlay').style.display = 'flex';
+  }
+
+  function closeOverlay() {
+    document.getElementById('overlay').style.display = 'none';
+  }
+
+  function navigate(direction) {
+    currentIndex += direction;
+    const images = document.querySelectorAll('.gallery-image img');
+    if (currentIndex < 0) currentIndex = images.length - 1;
+    if (currentIndex >= images.length) currentIndex = 0;
+    const currentImage = images[currentIndex];
+    openOverlay(currentImage.src, currentImage.alt, currentIndex);
+  }
+
+  function filterImages(category) {
+    const galleryImages = document.querySelectorAll('.gallery-image');
+
+    galleryImages.forEach(image => {
+      const dataCategory = image.getAttribute('data-category');
+      if (category === 'All' || dataCategory === category) {
+        image.style.display = 'block';
+      } else {
+        image.style.display = 'none';
+      }
+    });
+  }
+</script>
 
 </body>
 </html>
-
-
 
 
 

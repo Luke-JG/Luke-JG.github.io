@@ -59,7 +59,7 @@
     padding: 0; /* Adjust the top padding to create space for the navigation bar */
   }
   
-  ..hero-image {
+  .hero-image {
     position: relative;
     overflow: hidden;
     margin-top: 10px; /* Adjust the margin-top to create space for the navigation bar */
